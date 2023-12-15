@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f1f4fd;
+  min-height: 100vh;
+  font-family: "Kalnia", serif;
+  background: #f0ece2;
+}
+
+.container {
+  max-width: 90%;
+}
+h1 {
+  font-size: 60px;
+  width: 100;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: dotted;
+  color: #596e79;
+  margin: 0 auto;
+}
+h6 {
+  margin-bottom: 10px;
+  color: #596e79;
+  font-size: 20px;
+  font-weight: 300;
+  text-align: center;
+}
+.slide-wrap {
+  position: relative;
+}
+.slide-wrap .slide-button {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  color: #fff;
+  background: #000;
+  font-size: 15px;
+  border-radius: 50%;
+  outline: none;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.slide-wrap .slide-button:hover {
+  background: #444;
+}
+.slide-wrap .slide-button#prev-slide {
+  left: -20px;
+}
+.slide-wrap .slide-button#next-slide {
+  right: -20px;
+}
+.slide-wrap .img-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 15px;
+  font-size: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.slide-wrap .img-list::-webkit-scrollbar {
+  display: none;
+}
+
+.image-item {
+  width: 250px;
+  height: 375px;
+  border-radius: 10px;
+}
+
+p {
+  display: flex;
+  position: inherit;
+  grid-template-columns: repeat(6, 1fr);
+  font-size: 15px;
+  margin-top: 12px;
+  text-decoration: none;
+  border-style: double;
+  text-shadow: 5px 5px 10px rgba(27, 26, 27, 0.4);
+  color: #596e79;
+  padding: 5px;
+  text-align: center;
+  font-weight: 450;
+  border-radius: 10px;
+}
+
+#keep-reading {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background: #596e79;
+  color: #f0ece2;
+}
+
+#one:hover,
+#two:hover,
+#three:hover,
+#four:hover,
+#five:hover,
+#six:hover {
+  cursor: default;
+
+  img {
+    opacity: 0.7;
+    transform: scale(0.95);
+    transition: all 200ms ease-in-out;
+  }
+  p {
+    background-color: #dfd3c3;
+    transition: all 200ms ease-in-out;
+    color: #252d32;
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 13px;
+  margin-top: 10px;
+  opacity: 0.8;
+  color: #252d32;
+  a {
+    text-decoration: none;
+    color: #ea8a8a;
+  }
+}
